@@ -19,25 +19,29 @@ Bot = Client(
 DOWNLOAD_LOCATION = os.environ.get("DOWNLOAD_LOCATION", "./DOWNLOADS/")
 
 START_TEXT = """
-Hello {}, I am an under 5MB media or file to telegra.ph link uploader bot.
+Hello {},
+a simple telegra.ph uploader.
 
-Made by @FayasNoushad
+⍟ I can can convert gif, image or video(Mp4only) into telegra.ph (under 5MB)
 """
-HELP_TEXT = """
-- Just give me a media under 5MB
-- Then I will download it
-- I will then upload it to the telegra.ph link
+HELP_TEXT = """ **Follow This Step**
 
-Made by @FayasNoushad
+➠ Just give me a media [Image ,video (mp4 onoy)]under 5MB
+➠ Then I will download it
+➠ I will then upload it to the telegra.ph link
+
+**NOTE** : Currently I don't support text to telegraph
 """
 ABOUT_TEXT = """
-- **Bot :** `Telegraph Uploader`
-- **Creator :** [Fayas](https://telegram.me/TheFayas)
-- **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
-- **Source :** [Click here](https://github.com/FayasNoushad/Telegraph-Uploader-Bot)
-- **Language :** [Python3](https://python.org)
-- **Library :** [Pyrogram](https://pyrogram.org)
-- **Server :** [Heroku](https://heroku.com)
+➠ **Bot :** `Telegraph Uploader`
+➠ **Creator :** [Meee](https://telegram.me/OI7ROBOT)
+➠ **Channel :** [MyTestBotZ](https://telegram.me/MyTestBotZ)
+➠ **Credits :** Everyone in this Journey
+➠ **Source :** [Click here](https://github.com)
+➠ **Language :** [Python3](https://python.org)
+➠ **Library :** [Pyrogram](https://pyrogram.org)
+➠ **Server :** [Heroku](https://heroku.com)
+➠ **Build Version :** Version V1
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -55,8 +59,8 @@ HELP_BUTTONS = InlineKeyboardMarkup(
     )
 ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
-        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
+        InlineKeyboardButton('Channel', url='https://telegram.me/MyTestBotZ'),
+        InlineKeyboardButton('Any Queries', url='https://telegram.me/OO7ROBOT')
         ],[
         InlineKeyboardButton('Home', callback_data='home'),
         InlineKeyboardButton('Help', callback_data='help'),
@@ -130,7 +134,7 @@ async def getmedia(bot, update):
             reply_markup=reply_markup
         )
         return
-    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Join :-** @FayasNoushad"
+    text=f"**Link :-** `https://telegra.ph{response[0]}`\n\n**Other BotZ :-** @MyBotZlist"
     reply_markup=InlineKeyboardMarkup(
         [
             [
@@ -138,7 +142,7 @@ async def getmedia(bot, update):
                 InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url=https://telegra.ph{response[0]}")
             ],
             [
-                InlineKeyboardButton(text="Join Updates Channel", url="https://telegram.me/FayasNoushad")
+                InlineKeyboardButton(text="Join Updates Channel", url="https://telegram.me/MyTestBotZ")
             ]
         ]
     )
